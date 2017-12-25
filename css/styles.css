@@ -1,0 +1,7 @@
+#copyBtn {
+  color: #3498db;
+}
+
+#copyBtn:on-hover {
+  color: #2980b9;
+}

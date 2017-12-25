@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reddit clipboard",
+  "version": "1.5.1",
+  "description": "Copy the title and link of any Reddit post, straight to your clipboard!",
+
+  "browser_action": {
+    "default_icon": "images/copy_icon_16.png"
+  },
+
+  "icons": {
+    "16": "images/copy_icon_16.png",
+    "128": "images/copy_icon_128.png"
+  },
+
+  "content_scripts": [
+    {
+      "css": [
+        "css/styles.css", "css/bootstrap.min.css"
+      ],
+      "js": [
+        "js/jquery-3.2.1.min.js",
+        "js/clipboard.min.js",
+        "js/tether.min.js",
+        "js/bootstrap.min.js",
+        "js/content.js"
+      ],
+      "run_at": "document_end",
+      "matches": ["https://www.reddit.com/*"]
+    }
+  ]
+}
